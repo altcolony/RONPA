@@ -1,0 +1,11 @@
+﻿@model RONPA.ViewModels.CardVM;
+
+<div class="col-3">
+    <div class="card" >
+        <div class="card-body">
+            <p id="@Model.Id" class="card-text cardclass">@Model.Text</p>
+            <button id=@Model.EditBtnId class="btn btn-primary"onclick="handle(@Model.Id)" >編集</button>
+            <button id=@Model.RemoveBtnId class="btn btn-secondary">削除</button>
+        </div>
+    </div>
+</div>

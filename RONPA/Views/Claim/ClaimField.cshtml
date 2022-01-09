@@ -1,0 +1,7 @@
+﻿@model RONPA.ViewModels.ClaimFieldVM
+
+@for (int i = 0; i <Model.ClaimVMs.Count; i++)
+{
+    <partial name="_Claim" model="Model.ClaimVMs[i]"/>
+}
+
