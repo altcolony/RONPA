@@ -1,5 +1,5 @@
-﻿@using RONPA.Models
-@inject SettingModel settingModel
+﻿@using Microsoft.Extensions.Configuration;
+@inject IConfiguration configruation
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +41,7 @@
         <div class="container">
             &copy; 2021 - RONPA - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-        <input type="hidden" value="@settingModel.DomainName"/>
+        <input id="domain" type="hidden" value=@configruation["Domain:Name"] />
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

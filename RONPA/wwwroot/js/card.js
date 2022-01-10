@@ -10,4 +10,7 @@ function handle(id) {
         }
     }
 }
+function handleRegisterCard() {
+    var domain = document.getElementById("domain");
+}
 //# sourceMappingURL=card.js.map

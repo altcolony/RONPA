@@ -40,16 +40,16 @@ namespace RONPA.Controllers
             }
         }
 
-        public PartialViewResult OnGetCard(string text)
+        public IActionResult OnGenerateCard()
         {
             var vm = new CardVM() 
                          {
                             Id=2,
-                            Text = text,
+                            Text = string.Empty,
                             EditBtnId = $"edit_{2}",
                             RemoveBtnId = $"remove_{2}",
             };
-            return PartialView("_Card");
+            return PartialView("_Card",vm);
         }
     }
 }

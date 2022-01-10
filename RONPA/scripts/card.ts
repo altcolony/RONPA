@@ -12,3 +12,8 @@ function handle(id: string): void {
         }
     }
 }
+
+function handleRegisterCard(): void {
+    const domain = document.getElementById("domain");
+
+}

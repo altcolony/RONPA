@@ -25,7 +25,6 @@ namespace RONPA
         {
             var factory = new DependencySetupFactory();
             var setup = factory.CreateSetup(Configuration);
-            services.Configure<SettingModel>(Configuration.GetSection("DomainName"));
             setup.Run(services);
             services.AddControllersWithViews();
         }
