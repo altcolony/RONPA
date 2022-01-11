@@ -11,6 +11,17 @@ function handle(id) {
     }
 }
 function handleRegisterCard() {
+    var space = document.getElementById("addCardSpace");
     var domain = document.getElementById("domain");
+    var url = domain.value + 'card/OnGenerateCard';
+    fetch(url)
+        .then(function (response) {
+        return (response.text());
+    })
+        .then(function (html) {
+        space.innerHTML += html;
+    })
+        .catch(function (error) {
+    });
 }
 //# sourceMappingURL=card.js.map

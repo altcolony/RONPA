@@ -14,6 +14,18 @@ function handle(id: string): void {
 }
 
 function handleRegisterCard(): void {
-    const domain = document.getElementById("domain");
-
+    let space = document.getElementById("addCardSpace");
+    const domain = document.getElementById("domain") as HTMLInputElement;
+    let url = domain.value + 'card/OnGenerateCard';
+    fetch(url)
+        .then((response) => {
+            return (response.text());
+        })
+        .then((html) => {
+            space.innerHTML += html;
+        })
+        .catch((error) => {
+            
+        })
+    
 }
