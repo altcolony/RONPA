@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "RONPA.InMemory/1.0.0": {
+        "dependencies": {
+          "RONPA.Model": "1.0.0"
+        },
+        "runtime": {
+          "RONPA.InMemory.dll": {}
+        }
+      },
+      "RONPA.Model/1.0.0": {
+        "runtime": {
+          "RONPA.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RONPA.InMemory/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RONPA.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

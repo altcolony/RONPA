@@ -1,0 +1,12 @@
+C:\Users\altco\source\repos\RONPA\RONPA.Application\bin\Debug\netcoreapp3.1\RONPA.Application.deps.json
+C:\Users\altco\source\repos\RONPA\RONPA.Application\bin\Debug\netcoreapp3.1\RONPA.Application.dll
+C:\Users\altco\source\repos\RONPA\RONPA.Application\bin\Debug\netcoreapp3.1\RONPA.Application.pdb
+C:\Users\altco\source\repos\RONPA\RONPA.Application\bin\Debug\netcoreapp3.1\RONPA.Model.dll
+C:\Users\altco\source\repos\RONPA\RONPA.Application\bin\Debug\netcoreapp3.1\RONPA.Model.pdb
+C:\Users\altco\source\repos\RONPA\RONPA.Application\obj\Debug\netcoreapp3.1\RONPA.Application.csprojAssemblyReference.cache
+C:\Users\altco\source\repos\RONPA\RONPA.Application\obj\Debug\netcoreapp3.1\RONPA.Application.AssemblyInfoInputs.cache
+C:\Users\altco\source\repos\RONPA\RONPA.Application\obj\Debug\netcoreapp3.1\RONPA.Application.AssemblyInfo.cs
+C:\Users\altco\source\repos\RONPA\RONPA.Application\obj\Debug\netcoreapp3.1\RONPA.Application.csproj.CoreCompileInputs.cache
+C:\Users\altco\source\repos\RONPA\RONPA.Application\obj\Debug\netcoreapp3.1\RONPA.Application.csproj.CopyComplete
+C:\Users\altco\source\repos\RONPA\RONPA.Application\obj\Debug\netcoreapp3.1\RONPA.Application.dll
+C:\Users\altco\source\repos\RONPA\RONPA.Application\obj\Debug\netcoreapp3.1\RONPA.Application.pdb
