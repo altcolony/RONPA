@@ -11,12 +11,37 @@ function handle(id: string): void {
             cardText.outerHTML = `<p id="${id}"class="card-text cardclass">${cardInput.value} </p>`;
         }
     }
+    const editbtn = document.getElementById(`edit_${id}`);
+    if (editbtn.textContent == "編集") {
+        editbtn.textContent = "登録";
+    }
+    else if (editbtn.textContent == "登録") {
+        let input = cardText as HTMLInputElement;
+        const data = { 'id': id, "text": input.value };
+        const domain = document.getElementById("domain") as HTMLInputElement;
+        const url = domain.value + 'card/OnPostCard';
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success', data);
+            })
+            .catch((error) => {
+                console.error('Error', error);
+            });
+        editbtn.textContent = "編集";
+    }
 }
 
 function handleRegisterCard(): void {
-    let space = document.getElementById("addCardSpace");
+    const space = document.getElementById("addCardSpace");
     const domain = document.getElementById("domain") as HTMLInputElement;
-    let url = domain.value + 'card/OnGenerateCard';
+    const url = domain.value + 'card/OnGenerateCard';
     fetch(url)
         .then((response) => {
             return (response.text());
@@ -27,5 +52,4 @@ function handleRegisterCard(): void {
         .catch((error) => {
             
         })
-    
 }

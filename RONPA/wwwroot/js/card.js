@@ -9,6 +9,31 @@ function handle(id) {
             cardText.outerHTML = "<p id=\"".concat(id, "\"class=\"card-text cardclass\">").concat(cardInput.value, " </p>");
         }
     }
+    var editbtn = document.getElementById("edit_".concat(id));
+    if (editbtn.textContent == "編集") {
+        editbtn.textContent = "登録";
+    }
+    else if (editbtn.textContent == "登録") {
+        var input = cardText;
+        var data = { 'id': id, "text": input.value };
+        var domain = document.getElementById("domain");
+        var url = domain.value + 'card/OnPostCard';
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then(function (response) { return response.json(); })
+            .then(function (data) {
+            console.log('Success', data);
+        })
+            .catch(function (error) {
+            console.error('Error', error);
+        });
+        editbtn.textContent = "編集";
+    }
 }
 function handleRegisterCard() {
     var space = document.getElementById("addCardSpace");

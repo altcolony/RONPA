@@ -51,5 +51,19 @@ namespace RONPA.Controllers
             };
             return PartialView("_Card",vm);
         }
+        [HttpPost]
+        public IActionResult OnPostCard([FromBody]CardVM request)
+        {
+            var vm = new CardVM()
+            {
+                Id = request.Id,
+                Text = request.Text,
+                EditBtnId = $"edit_{request.Id}",
+                RemoveBtnId = $"remove_{request.Id}",
+            };
+            
+            return RedirectToAction("CardField");
+        }
+
     }
 }
