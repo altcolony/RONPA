@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RONPA.Model
+namespace RONPA.Domain
 {
-    public class Card
+    public class Reason
     {
-        public Card(int id,  string text)
+        public Reason(int id,  string text)
         {
             Id = id;
             Text = text;

@@ -1,0 +1,8 @@
+C:\Users\altco\source\repos\RONPA\RONPA.Model\bin\Debug\netcoreapp3.1\RONPA.Domain.deps.json
+C:\Users\altco\source\repos\RONPA\RONPA.Model\bin\Debug\netcoreapp3.1\RONPA.Domain.dll
+C:\Users\altco\source\repos\RONPA\RONPA.Model\bin\Debug\netcoreapp3.1\RONPA.Domain.pdb
+C:\Users\altco\source\repos\RONPA\RONPA.Model\obj\Debug\netcoreapp3.1\RONPA.Domain.AssemblyInfoInputs.cache
+C:\Users\altco\source\repos\RONPA\RONPA.Model\obj\Debug\netcoreapp3.1\RONPA.Domain.AssemblyInfo.cs
+C:\Users\altco\source\repos\RONPA\RONPA.Model\obj\Debug\netcoreapp3.1\RONPA.Domain.csproj.CoreCompileInputs.cache
+C:\Users\altco\source\repos\RONPA\RONPA.Model\obj\Debug\netcoreapp3.1\RONPA.Domain.dll
+C:\Users\altco\source\repos\RONPA\RONPA.Model\obj\Debug\netcoreapp3.1\RONPA.Domain.pdb

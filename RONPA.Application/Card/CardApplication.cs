@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using RONPA.Model;
+using RONPA.Domain;
 
 namespace RONPA.Application
 {
     public class CardApplication
     {
-        private readonly ICardRepository _cardRepository; 
-        public CardApplication(ICardRepository cardRepository)
+        private readonly IReasonRepository _cardRepository; 
+        public CardApplication(IReasonRepository cardRepository)
         {
             _cardRepository = cardRepository;
         }
-        public IEnumerable<Card> GetAll(GetAllCardCommand command)
+        public IEnumerable<Reason> GetAll(GetAllCardCommand command)
         {
             return _cardRepository.FindAll(command.Ids);
         }
-        public IEnumerable<Card> GetAll()
+        public IEnumerable<Reason> GetAll()
         {
             return _cardRepository.FindAll();
         }

@@ -14,7 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\RONPA.Application\RONPA.Application.csproj" />
     <ProjectReference Include="..\RONPA.InMemory\RONPA.InMemory.csproj" />
-    <ProjectReference Include="..\RONPA.Model\RONPA.Model.csproj" />
+    <ProjectReference Include="..\RONPA.Model\RONPA.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Model\\RONPA.Model.csproj",
-      "projectName": "RONPA.Model",
-      "projectPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Model\\RONPA.Model.csproj",
+      "projectUniqueName": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Model\\RONPA.Domain.csproj",
+      "projectName": "RONPA.Domain",
+      "projectPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Model\\RONPA.Domain.csproj",
       "packagesPath": "C:\\Users\\altco\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Model\\obj\\",
       "projectStyle": "PackageReference",

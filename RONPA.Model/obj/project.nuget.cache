@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4sFQRuhONL/I9qVoYEV/gab/V35iSlpTpVVyNStJN+Ua7AQIbey61uCI5H0hdSe/FvdyYZ0WvofkYHsiVNIE1Q==",
+  "dgSpecHash": "pKG9B+0YpyFcsp6y3pRkz0TTvKi7immJ4Zgp87bC8DV4ewBo7U4cdVciKAMJfxMQKVC63jKtE78DLwSweJFaJg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Model\\RONPA.Model.csproj",
+  "projectFilePath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Model\\RONPA.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

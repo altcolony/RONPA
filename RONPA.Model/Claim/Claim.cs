@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RONPA.Model
+namespace RONPA.Domain
 {
     public class Claim
     {
         public Claim(
             int id,
             string text,
-            IList<Card>cards,
+            IList<Reason>cards,
             IList<Remark>remarks)
         {
             Id = id;
@@ -18,7 +18,7 @@ namespace RONPA.Model
         }
         public int Id { get; }
         public string Text { get; }
-        public IList<Card> Cards { get; }
+        public IList<Reason> Cards { get; }
         public IList<Remark> Remarks { get;  }
     }
 }

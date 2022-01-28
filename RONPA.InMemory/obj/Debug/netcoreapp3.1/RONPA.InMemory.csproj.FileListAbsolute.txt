@@ -1,8 +1,8 @@
 C:\Users\altco\source\repos\RONPA\RONPA.InMemory\bin\Debug\netcoreapp3.1\RONPA.InMemory.deps.json
 C:\Users\altco\source\repos\RONPA\RONPA.InMemory\bin\Debug\netcoreapp3.1\RONPA.InMemory.dll
 C:\Users\altco\source\repos\RONPA\RONPA.InMemory\bin\Debug\netcoreapp3.1\RONPA.InMemory.pdb
-C:\Users\altco\source\repos\RONPA\RONPA.InMemory\bin\Debug\netcoreapp3.1\RONPA.Model.dll
-C:\Users\altco\source\repos\RONPA\RONPA.InMemory\bin\Debug\netcoreapp3.1\RONPA.Model.pdb
+C:\Users\altco\source\repos\RONPA\RONPA.InMemory\bin\Debug\netcoreapp3.1\RONPA.Domain.dll
+C:\Users\altco\source\repos\RONPA\RONPA.InMemory\bin\Debug\netcoreapp3.1\RONPA.Domain.pdb
 C:\Users\altco\source\repos\RONPA\RONPA.InMemory\obj\Debug\netcoreapp3.1\RONPA.InMemory.csprojAssemblyReference.cache
 C:\Users\altco\source\repos\RONPA\RONPA.InMemory\obj\Debug\netcoreapp3.1\RONPA.InMemory.AssemblyInfoInputs.cache
 C:\Users\altco\source\repos\RONPA\RONPA.InMemory\obj\Debug\netcoreapp3.1\RONPA.InMemory.AssemblyInfo.cs

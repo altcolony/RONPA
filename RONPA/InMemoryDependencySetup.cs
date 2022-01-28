@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using RONPA.Application;
 using RONPA.InMemory;
-using RONPA.Model;
+using RONPA.Domain;
 
 namespace RONPA
 {
@@ -18,7 +18,7 @@ namespace RONPA
         }
         private void SetupRepository(IServiceCollection services)
         {
-            services.AddSingleton<ICardRepository, InMemoryCardRepository>();
+            services.AddSingleton<IReasonRepository, InMemoryCardRepository>();
             services.AddSingleton<IClaimRepository, InMemoryClaimRepository>();
 
         }

@@ -13,36 +13,36 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "RONPA.Model": "1.0.0"
+          "RONPA.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/RONPA.Application.dll": {}
         },
         "runtime": {
           "bin/placeholder/RONPA.Application.dll": {}
+        }
+      },
+      "RONPA.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/RONPA.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RONPA.Domain.dll": {}
         }
       },
       "RONPA.InMemory/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "RONPA.Model": "1.0.0"
+          "RONPA.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/RONPA.InMemory.dll": {}
         },
         "runtime": {
           "bin/placeholder/RONPA.InMemory.dll": {}
-        }
-      },
-      "RONPA.Model/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/RONPA.Model.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/RONPA.Model.dll": {}
         }
       }
     }
@@ -164,23 +164,23 @@
       "path": "../RONPA.Application/RONPA.Application.csproj",
       "msbuildProject": "../RONPA.Application/RONPA.Application.csproj"
     },
+    "RONPA.Domain/1.0.0": {
+      "type": "project",
+      "path": "../RONPA.Model/RONPA.Domain.csproj",
+      "msbuildProject": "../RONPA.Model/RONPA.Domain.csproj"
+    },
     "RONPA.InMemory/1.0.0": {
       "type": "project",
       "path": "../RONPA.InMemory/RONPA.InMemory.csproj",
       "msbuildProject": "../RONPA.InMemory/RONPA.InMemory.csproj"
-    },
-    "RONPA.Model/1.0.0": {
-      "type": "project",
-      "path": "../RONPA.Model/RONPA.Model.csproj",
-      "msbuildProject": "../RONPA.Model/RONPA.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.TypeScript.MSBuild >= 4.5.3",
       "RONPA.Application >= 1.0.0",
-      "RONPA.InMemory >= 1.0.0",
-      "RONPA.Model >= 1.0.0"
+      "RONPA.Domain >= 1.0.0",
+      "RONPA.InMemory >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -221,8 +221,8 @@
             "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.InMemory\\RONPA.InMemory.csproj": {
               "projectPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.InMemory\\RONPA.InMemory.csproj"
             },
-            "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Model\\RONPA.Model.csproj": {
-              "projectPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Model\\RONPA.Model.csproj"
+            "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Model\\RONPA.Domain.csproj": {
+              "projectPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Model\\RONPA.Domain.csproj"
             }
           }
         }

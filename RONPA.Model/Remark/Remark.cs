@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RONPA.Model
+namespace RONPA.Domain
 {
     /// <summary>
     /// ツッコミModel

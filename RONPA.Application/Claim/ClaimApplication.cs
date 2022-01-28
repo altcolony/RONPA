@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using RONPA.Model;
+using RONPA.Domain;
 
 namespace RONPA.Application
 {

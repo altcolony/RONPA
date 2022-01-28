@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RONPA.Model\RONPA.Model.csproj" />
+    <ProjectReference Include="..\RONPA.Model\RONPA.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,28 +2,28 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "RONPA.Model/1.0.0": {
+      "RONPA.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "compile": {
-          "bin/placeholder/RONPA.Model.dll": {}
+          "bin/placeholder/RONPA.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RONPA.Model.dll": {}
+          "bin/placeholder/RONPA.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "RONPA.Model/1.0.0": {
+    "RONPA.Domain/1.0.0": {
       "type": "project",
-      "path": "../RONPA.Model/RONPA.Model.csproj",
-      "msbuildProject": "../RONPA.Model/RONPA.Model.csproj"
+      "path": "../RONPA.Model/RONPA.Domain.csproj",
+      "msbuildProject": "../RONPA.Model/RONPA.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "RONPA.Model >= 1.0.0"
+      "RONPA.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -58,8 +58,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Model\\RONPA.Model.csproj": {
-              "projectPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Model\\RONPA.Model.csproj"
+            "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Model\\RONPA.Domain.csproj": {
+              "projectPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Model\\RONPA.Domain.csproj"
             }
           }
         }
