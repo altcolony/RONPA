@@ -4,32 +4,32 @@ using RONPA.Domain;
 
 namespace RONPA.InMemory
 {
-    public class InMemoryCardRepository:IReasonRepository
+    public class InMemoryCardRepository:IKnowledgeRepository
     {
-        private readonly Dictionary<int, Reason> Store = new Dictionary<int, Reason>()
+        private readonly Dictionary<int, Knowledge> Store = new Dictionary<int, Knowledge>()
         {
-            {0,new Reason(0,"テストテキスト") },
+            {0,new Knowledge(0,"テストテキスト") },
         };
 
-        public Reason Find(int id)
+        public Knowledge Find(int id)
         {
             return Store[id];
         }
-        public IEnumerable<Reason> FindAll(IEnumerable<int> ids)
+        public IEnumerable<Knowledge> FindAll(IEnumerable<int> ids)
         {
             foreach (var id in ids)
             {
                 yield return Store[id];
             }
         }
-        public IEnumerable<Reason> FindAll()
+        public IEnumerable<Knowledge> FindAll()
         {
             foreach (var item in Store)
             {
                 yield return item.Value;
             }
         }
-        public void Save(Reason card)
+        public void Save(Knowledge card)
         {
             Store.Add(1, card);
         }

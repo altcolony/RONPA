@@ -11,11 +11,7 @@ namespace RONPA.InMemory
             {1,new Claim(
                 1,
                 "テスト主張テキスト",
-                new List<Reason>()
-                    {new Reason(1,"テストカードテキスト") ,},
-                new List<Remark>()
-                    {new Remark(1,1,"テスト突っ込みテキスト1",new List<Remark>(){new Remark(2,1, "テスト突っ込みテキスト2",new List<Remark>()) })}
-                )
+                new Thinking()            )
             }
         };
         public Claim Find(int id)

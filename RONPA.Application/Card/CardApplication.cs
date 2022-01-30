@@ -6,16 +6,16 @@ namespace RONPA.Application
 {
     public class CardApplication
     {
-        private readonly IReasonRepository _cardRepository; 
-        public CardApplication(IReasonRepository cardRepository)
+        private readonly IKnowledgeRepository _cardRepository; 
+        public CardApplication(IKnowledgeRepository cardRepository)
         {
             _cardRepository = cardRepository;
         }
-        public IEnumerable<Reason> GetAll(GetAllCardCommand command)
+        public IEnumerable<Knowledge> GetAll(GetAllCardCommand command)
         {
             return _cardRepository.FindAll(command.Ids);
         }
-        public IEnumerable<Reason> GetAll()
+        public IEnumerable<Knowledge> GetAll()
         {
             return _cardRepository.FindAll();
         }
