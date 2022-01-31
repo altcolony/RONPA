@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RONPA.Domain
+namespace RONPA.Domain.Knowledges
 {
     public class KnowledgeId:IEquatable<KnowledgeId>
     {

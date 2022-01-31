@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using RONPA.Domain;
+using RONPA.Domain.Claims;
 
-namespace RONPA.Application
+namespace RONPA.Application.Claims
 {
     public class ClaimApplication
     {

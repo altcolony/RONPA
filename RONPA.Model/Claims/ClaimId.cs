@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RONPA.Domain
+namespace RONPA.Domain.Claims
 {
     public class ClaimId:IEquatable<ClaimId>
     {

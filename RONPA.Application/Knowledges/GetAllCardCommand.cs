@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RONPA.Application
+namespace RONPA.Application.Knowledges
 {
     public class GetAllCardCommand
     {

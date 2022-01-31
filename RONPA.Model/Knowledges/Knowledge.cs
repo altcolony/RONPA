@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using RONPA.Domain.Thinkings;
+using RONPA.Domain.Claims;
 
-namespace RONPA.Domain
+namespace RONPA.Domain.Knowledges
 {
     public class Knowledge : IMemo
     {

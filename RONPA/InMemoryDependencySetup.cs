@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
-using RONPA.Application;
+using RONPA.Application.Claims;
+using RONPA.Application.Knowledges;
 using RONPA.InMemory;
-using RONPA.Domain;
+using RONPA.Domain.Knowledges;
+using RONPA.Domain.Claims;
 
 namespace RONPA
 {

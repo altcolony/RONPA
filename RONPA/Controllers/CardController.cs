@@ -3,7 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using RONPA.Application;
+using RONPA.Application.Claims;
+using RONPA.Application.Knowledges;
 using RONPA.ViewModels;
 
 namespace RONPA.Controllers

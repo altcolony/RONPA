@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace RONPA.Domain
+namespace RONPA.Domain.Hypothesises
 {
-    public class ThinkingId:IEquatable<ThinkingId>
+    public class HypothesisId:IEquatable<HypothesisId>
     {
-        public ThinkingId(int value)
+        public HypothesisId(int value)
         {
             Value = value;
         }
         public int Value { get; }
 
-        public bool Equals(ThinkingId other)
+        public bool Equals(HypothesisId other)
         {
             if (ReferenceEquals(null, other))
             {
@@ -49,7 +48,7 @@ namespace RONPA.Domain
                 return false;
             }
 
-            return Equals((ThinkingId)obj);
+            return Equals((HypothesisId)obj);
         }
 
         /// <summary>

@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using RONPA.Domain.Thinkings;
 
-namespace RONPA.Domain
+namespace RONPA.Domain.Hypothesises
 {
     public class Hypothesis:IMemo
     {

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using RONPA.Domain;
+using RONPA.Domain.Claims;
+using RONPA.Domain.Knowledges;
+using RONPA.Domain.Thinkings;
+
 
 namespace RONPA.InMemory
 {
