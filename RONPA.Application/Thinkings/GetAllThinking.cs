@@ -11,7 +11,7 @@ namespace RONPA.UseCase.Thinkings
         {
             _thinkingRepository = thinkingRepository;
         }
-        public IEnumerable<Thinking> Run()
+        public IEnumerable<Thinking> Execute()
         {
             return _thinkingRepository.FindAll();
         }

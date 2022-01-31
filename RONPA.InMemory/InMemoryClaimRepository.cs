@@ -29,6 +29,8 @@ namespace RONPA.InMemory
                 yield return item.Value;
             }
         }
+        
+
         public void Save(Claim claim)
         {
             Store.Add(claim.Id.Value, claim);

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using RONPA.Domain;
+using RONPA.Domain.Thinkings;
 using RONPA.Domain.Knowledges;
-
+using RONPA.Domain.Claims;
 
 namespace RONPA.InMemory
 {
@@ -11,7 +11,13 @@ namespace RONPA.InMemory
         private readonly Dictionary<int, Knowledge> Store = new Dictionary<int, Knowledge>()
         {
             {
-                0,new Knowledge(new KnowledgeId(0),"テストknowledge") 
+                0,new Knowledge(
+                    new KnowledgeId(0),
+                    "テストknowledge",
+                    new List<KnowledgeId>(),
+                    new List<ThinkingId>(),
+                    new List<ClaimId>()
+                    ) 
             },
         };
 
@@ -31,6 +37,16 @@ namespace RONPA.InMemory
             foreach (var item in Store)
             {
                 yield return item.Value;
+            }
+        }
+        public IEnumerable<Knowledge> FindByThinking(ThinkingId id)
+        {
+            foreach (var item in Store)
+            {
+                if (item.Value.ThinkingIds.Contains(id))
+                {
+                    yield return item.Value;
+                }
             }
         }
         public void Save(Knowledge card)

@@ -7,16 +7,24 @@ namespace RONPA.Domain.Knowledges
 {
     public class Knowledge : IMemo
     {
-        public Knowledge(KnowledgeId id, string text)
+        public Knowledge(
+            KnowledgeId id,
+            string text,
+            IList<KnowledgeId>knowledgeIds,
+            IList<ThinkingId>thinkingIds,
+            IList<ClaimId>claimIds)
         {
             Id = id;
             Text = text;
+            KnowledgeIds = knowledgeIds;
+            ThinkingIds = thinkingIds;
+            ClaimIds = claimIds;
         }
         public KnowledgeId Id { get; }
         public string Text { get; private set; }
-        public IList<KnowledgeId> KnowledgeIds { get; }
-        public IList<ThinkingId> ThinkingIds { get; }
-        public IList<ClaimId> ClaimIds { get; }
+        public IList<KnowledgeId> KnowledgeIds { get; private set; }
+        public IList<ThinkingId> ThinkingIds { get; private set; }
+        public IList<ClaimId> ClaimIds { get; private set; }
 
         public void ChangeText(string newText)
         {
@@ -29,14 +37,17 @@ namespace RONPA.Domain.Knowledges
         }
         public void JoinKnowledge(KnowledgeId id)
         {
+            if (KnowledgeIds == null) KnowledgeIds = new List<KnowledgeId>();
             KnowledgeIds.Add(id);
         }
         public void JoinThinking(ThinkingId id)
         {
+            if (ThinkingIds == null) ThinkingIds = new List<ThinkingId>();
             ThinkingIds.Add(id);
         }
         public void JoinClaim(ClaimId id)
         {
+            if (ClaimIds == null) ClaimIds = new List<ClaimId>();
             ClaimIds.Add(id);
         }
     }
