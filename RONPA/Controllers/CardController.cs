@@ -24,7 +24,7 @@ namespace RONPA.Controllers
                 {
                     CardVMs = result.Select(x => new CardVM
                     {
-                        Id = x.Id,
+                        Id = x.Id.Value,
                         Text = x.Text,
                         EditBtnId = $"edit_{x.Id}",
                         RemoveBtnId = $"remove_{x.Id}",

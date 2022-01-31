@@ -9,9 +9,10 @@ namespace RONPA.InMemory
         private Dictionary<int, Claim> Store = new Dictionary<int, Claim>()
         {
             {1,new Claim(
-                1,
-                "テスト主張テキスト",
-                new Thinking()            )
+                new ClaimId(1),
+                "テストclaim",
+                new List<KnowledgeId>(),
+                new ThinkingId(1))
             }
         };
         public Claim Find(int id)
@@ -27,7 +28,7 @@ namespace RONPA.InMemory
         }
         public void Save(Claim claim)
         {
-            Store.Add(claim.Id, claim);
+            Store.Add(claim.Id.Value, claim);
         }
         public void Delete(int id)
         {

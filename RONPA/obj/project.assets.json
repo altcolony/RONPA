@@ -9,19 +9,6 @@
           "build/Microsoft.TypeScript.MSBuild.targets": {}
         }
       },
-      "RONPA.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "RONPA.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/RONPA.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/RONPA.Application.dll": {}
-        }
-      },
       "RONPA.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -43,6 +30,19 @@
         },
         "runtime": {
           "bin/placeholder/RONPA.InMemory.dll": {}
+        }
+      },
+      "RONPA.UseCase/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "RONPA.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RONPA.UseCase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RONPA.UseCase.dll": {}
         }
       }
     }
@@ -159,11 +159,6 @@
         "tools/tsc/zh-TW/diagnosticMessages.generated.json"
       ]
     },
-    "RONPA.Application/1.0.0": {
-      "type": "project",
-      "path": "../RONPA.Application/RONPA.Application.csproj",
-      "msbuildProject": "../RONPA.Application/RONPA.Application.csproj"
-    },
     "RONPA.Domain/1.0.0": {
       "type": "project",
       "path": "../RONPA.Model/RONPA.Domain.csproj",
@@ -173,14 +168,19 @@
       "type": "project",
       "path": "../RONPA.InMemory/RONPA.InMemory.csproj",
       "msbuildProject": "../RONPA.InMemory/RONPA.InMemory.csproj"
+    },
+    "RONPA.UseCase/1.0.0": {
+      "type": "project",
+      "path": "../RONPA.Application/RONPA.UseCase.csproj",
+      "msbuildProject": "../RONPA.Application/RONPA.UseCase.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.TypeScript.MSBuild >= 4.5.3",
-      "RONPA.Application >= 1.0.0",
       "RONPA.Domain >= 1.0.0",
-      "RONPA.InMemory >= 1.0.0"
+      "RONPA.InMemory >= 1.0.0",
+      "RONPA.UseCase >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -215,8 +215,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Application\\RONPA.Application.csproj": {
-              "projectPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Application\\RONPA.Application.csproj"
+            "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Application\\RONPA.UseCase.csproj": {
+              "projectPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Application\\RONPA.UseCase.csproj"
             },
             "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.InMemory\\RONPA.InMemory.csproj": {
               "projectPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.InMemory\\RONPA.InMemory.csproj"

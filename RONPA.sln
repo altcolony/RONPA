@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RONPA.InMemory", "RONPA.InM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RONPA.Domain", "RONPA.Model\RONPA.Domain.csproj", "{06F64595-5BCA-4B48-A81B-6F5E53F0F273}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RONPA.Application", "RONPA.Application\RONPA.Application.csproj", "{01C4407B-BF3F-4EB9-A7C1-7AF4C373C079}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RONPA.UseCase", "RONPA.Application\RONPA.UseCase.csproj", "{01C4407B-BF3F-4EB9-A7C1-7AF4C373C079}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestRONPA", "UnitTestRONPA\UnitTestRONPA.csproj", "{AB007368-67E9-4323-9383-211575C73260}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{01C4407B-BF3F-4EB9-A7C1-7AF4C373C079}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01C4407B-BF3F-4EB9-A7C1-7AF4C373C079}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01C4407B-BF3F-4EB9-A7C1-7AF4C373C079}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB007368-67E9-4323-9383-211575C73260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB007368-67E9-4323-9383-211575C73260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB007368-67E9-4323-9383-211575C73260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB007368-67E9-4323-9383-211575C73260}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

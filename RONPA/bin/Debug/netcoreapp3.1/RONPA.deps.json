@@ -32,9 +32,9 @@
       "RONPA/1.0.0": {
         "dependencies": {
           "Microsoft.TypeScript.MSBuild": "4.5.3",
-          "RONPA.Application": "1.0.0",
           "RONPA.Domain": "1.0.0",
           "RONPA.InMemory": "1.0.0",
+          "RONPA.UseCase": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -326,17 +326,6 @@
         }
       },
       "Microsoft.TypeScript.MSBuild/4.5.3": {},
-      "RONPA.Application/1.0.0": {
-        "dependencies": {
-          "RONPA.Domain": "1.0.0"
-        },
-        "runtime": {
-          "RONPA.Application.dll": {}
-        },
-        "compile": {
-          "RONPA.Application.dll": {}
-        }
-      },
       "RONPA.Domain/1.0.0": {
         "runtime": {
           "RONPA.Domain.dll": {}
@@ -354,6 +343,17 @@
         },
         "compile": {
           "RONPA.InMemory.dll": {}
+        }
+      },
+      "RONPA.UseCase/1.0.0": {
+        "dependencies": {
+          "RONPA.Domain": "1.0.0"
+        },
+        "runtime": {
+          "RONPA.UseCase.dll": {}
+        },
+        "compile": {
+          "RONPA.UseCase.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -2063,17 +2063,17 @@
       "path": "microsoft.typescript.msbuild/4.5.3",
       "hashPath": "microsoft.typescript.msbuild.4.5.3.nupkg.sha512"
     },
-    "RONPA.Application/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "RONPA.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "RONPA.InMemory/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RONPA.UseCase/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

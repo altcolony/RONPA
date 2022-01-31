@@ -21,18 +21,7 @@ namespace RONPA.Controllers
             {
                 var vm = new ClaimFieldVM()
                 {
-                    ClaimVMs = _claimApplication.GetAll()
-                                               .Select(x => new ClaimVM
-                                               {
-                                                   Id = x.Id,
-                                                   Text = x.Text,
-                                                   CardVMs = x.Cards.Select(x => new CardVM() 
-                                                                                 {
-                                                                                    Id = x.Id,
-                                                                                    Text = x.Text,
-                                                                                 }).ToList(),
-                                               })
-                                               .ToList(),
+                    
                 };
 
                 return View(vm);

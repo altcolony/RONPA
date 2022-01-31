@@ -4,12 +4,12 @@
     "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA\\RONPA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Application\\RONPA.Application.csproj": {
+    "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Application\\RONPA.UseCase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Application\\RONPA.Application.csproj",
-        "projectName": "RONPA.Application",
-        "projectPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Application\\RONPA.Application.csproj",
+        "projectUniqueName": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Application\\RONPA.UseCase.csproj",
+        "projectName": "RONPA.UseCase",
+        "projectPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Application\\RONPA.UseCase.csproj",
         "packagesPath": "C:\\Users\\altco\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Application\\obj\\",
         "projectStyle": "PackageReference",
@@ -214,8 +214,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Application\\RONPA.Application.csproj": {
-                "projectPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Application\\RONPA.Application.csproj"
+              "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Application\\RONPA.UseCase.csproj": {
+                "projectPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.Application\\RONPA.UseCase.csproj"
               },
               "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.InMemory\\RONPA.InMemory.csproj": {
                 "projectPath": "C:\\Users\\altco\\source\\repos\\RONPA\\RONPA.InMemory\\RONPA.InMemory.csproj"

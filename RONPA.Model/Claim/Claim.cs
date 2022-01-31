@@ -32,7 +32,11 @@ namespace RONPA.Domain
             throw new Exception("知識は1つ以上必要です。");
             
         }
-        
+        public void RemoveKnowledge(KnowledgeId removeId)
+        {
+            KnowledgeIds.Remove(removeId);
+            if (KnowledgeIds.Count == 0) throw new Exception("知識は1つ以上必要です。");
+        }
         
         
     }

@@ -8,7 +8,9 @@ namespace RONPA.InMemory
     {
         private readonly Dictionary<int, Knowledge> Store = new Dictionary<int, Knowledge>()
         {
-            {0,new Knowledge(0,"テストテキスト") },
+            {
+                0,new Knowledge(new KnowledgeId(0),"テストknowledge") 
+            },
         };
 
         public Knowledge Find(int id)
