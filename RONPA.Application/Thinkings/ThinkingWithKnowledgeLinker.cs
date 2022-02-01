@@ -1,25 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using RONPA.Domain.Knowledges;
+using System.Linq;
 using RONPA.Domain.Thinkings;
+using RONPA.Domain.Knowledges;
 
 namespace RONPA.UseCase.Thinkings
 {
-    public class GetLinkedKnowledge
+    public class ThinkingWithKnowledgeLinker
     {
         private readonly IThinkingRepository _thinkingRepository;
         private readonly IKnowledgeRepository _knowledgeRepository;
-        public GetLinkedKnowledge(
+        public ThinkingWithKnowledgeLinker(
             IThinkingRepository thinkingRepository,
             IKnowledgeRepository knowledgeRepository)
         {
             _thinkingRepository = thinkingRepository;
             _knowledgeRepository = knowledgeRepository;
         }
-        public IEnumerable<Knowledge> Execute(ThinkingId id)
+        public void Execute(ThinkingWithKnowledgeLinkCommand command)
         {
-            var thiking = _thinkingRepository.Find(id);
-            return _knowledgeRepository.FindByThinking(thiking.Id);
+            var thinking = _thinkingRepository.Find(new ThinkingId(command.ThinkingId));
+            var knowledgeids = command.KnowledgeIds.Select(x => new KnowledgeId(x)).ToList();
+            knowledgeids.ForEach(x => thinking.JoinKnowledge(x));
+            _thinkingRepository.Save(thinking);
         }
     }
 }

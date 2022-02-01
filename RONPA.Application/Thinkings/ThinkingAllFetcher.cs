@@ -4,10 +4,10 @@ using RONPA.Domain.Thinkings;
 
 namespace RONPA.UseCase.Thinkings
 {
-    public class GetAllThinking
+    public class ThinkingAllFetcher
     {
         private readonly IThinkingRepository _thinkingRepository;
-        public GetAllThinking(IThinkingRepository thinkingRepository)
+        public ThinkingAllFetcher(IThinkingRepository thinkingRepository)
         {
             _thinkingRepository = thinkingRepository;
         }

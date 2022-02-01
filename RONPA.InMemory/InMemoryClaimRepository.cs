@@ -22,6 +22,14 @@ namespace RONPA.InMemory
         {
             return Store[id];
         }
+        public Claim FindByThinking(ThinkingId id)
+        {
+            foreach (var item in Store)
+            {
+                if (item.Value.ThinkingId.Value == id.Value) return item.Value;
+            }
+            return null;
+        }
         public IEnumerable<Claim> FindAll()
         {
             foreach (var item in Store)
