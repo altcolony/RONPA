@@ -43,6 +43,10 @@ namespace RONPA.Domain.Thinkings
         {
             KnowledgeIds.Remove(id);
         }
+        public void AttachClaim(ClaimId id)
+        {
+            ClaimId = id;
+        }
         public void FetchClaim(ClaimId claimId)
         {
             ClaimId = claimId;
