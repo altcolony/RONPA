@@ -6,12 +6,11 @@ namespace RONPA.Domain.Knowledges
 {
     public interface IKnowledgeRepository
     {
-        public Knowledge Find(KnowledgeId id);
+        //public Knowledge Find(KnowledgeId id);
         public IEnumerable<Knowledge> FindByThinking(ThinkingId id);
-        public IEnumerable<Knowledge> FindByKnowledgeIds(IEnumerable<KnowledgeId>ids);
         public IEnumerable<Knowledge> FindAll();
 
         void Save(Knowledge card);
-        void Delete(KnowledgeId id);
+        //void Delete(KnowledgeId id);
     }
 }

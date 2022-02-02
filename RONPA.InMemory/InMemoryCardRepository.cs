@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using RONPA.Domain.Thinkings;
 using RONPA.Domain.Knowledges;
 using RONPA.Domain.Claims;
@@ -16,7 +17,8 @@ namespace RONPA.InMemory
                     "テストknowledge",
                     new List<KnowledgeId>(),
                     new List<ThinkingId>(),
-                    new List<ClaimId>()
+                    new List<ClaimId>(),
+                    new DateTime(2022,1,1)
                     ) 
             },
         };

@@ -15,7 +15,8 @@ namespace RONPA.InMemory
                 new ClaimId(1),
                 "テストclaim",
                 new List<KnowledgeId>(),
-                new ThinkingId(1))
+                new ThinkingId(1),
+                new DateTime(2022,1,1))
             }
         };
         public Claim Find(int id)

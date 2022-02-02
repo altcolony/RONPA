@@ -12,13 +12,15 @@ namespace RONPA.Domain.Knowledges
             string text,
             IList<KnowledgeId>knowledgeIds,
             IList<ThinkingId>thinkingIds,
-            IList<ClaimId>claimIds)
+            IList<ClaimId>claimIds,
+            DateTime date)
         {
             Id = id;
             Text = text;
             KnowledgeIds = knowledgeIds;
             ThinkingIds = thinkingIds;
             ClaimIds = claimIds;
+            Date = date;
         }
         public KnowledgeId Id { get; }
         public string Text { get; private set; }
@@ -26,11 +28,17 @@ namespace RONPA.Domain.Knowledges
         public IList<ThinkingId> ThinkingIds { get; private set; }
         public IList<ClaimId> ClaimIds { get; private set; }
 
+        public DateTime Date { get;private set; }
+
         public void ChangeText(string newText)
         {
             if (newText.Length > 100) throw new Exception($"100文字以内で入力して下さい。");
             Text = newText;
         }
+        public void ChangeDate(DateTime newDate) 
+        {
+            Date = newDate;
+        } 
         public bool IsNotSame(KnowledgeId other)
         {
             return this.Id.Value == other.Value ? throw new Exception("同一の知識は紐づけられません") : true;

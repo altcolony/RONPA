@@ -11,22 +11,29 @@ namespace RONPA.Domain.Claims
             ClaimId id,
             string text,
             IList<KnowledgeId>knowledgeIds,
-            ThinkingId thinkingId)
+            ThinkingId thinkingId,
+            DateTime date)
         {
             Id = id;
             Text = text;
             KnowledgeIds = knowledgeIds??throw new Exception("null");
             ThinkingId = thinkingId??throw new Exception("null");
+            Date = date;
         }
         public ClaimId Id { get; }
         public string Text { get; private set; }
         public IList<KnowledgeId> KnowledgeIds { get; }
         public ThinkingId ThinkingId { get; }
+        public DateTime Date { get;private set; }
 
         public void ChangeText(string newText)
         {
             if (newText.Length > 1000) throw new Exception($"1000文字以内で入力して下さい。");
             Text = newText;
+        }
+        public void ChangeDate(DateTime newDate)
+        {
+            Date = newDate;
         }
         public bool IsGenerate()
         {

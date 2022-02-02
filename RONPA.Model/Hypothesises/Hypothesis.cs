@@ -8,18 +8,25 @@ namespace RONPA.Domain.Hypothesises
     {
         public Hypothesis(
             HypothesisId id,
-            ThinkingId thinkingId)
+            ThinkingId thinkingId,
+            DateTime date)
         {
             Id = id;
             ThinkingId = thinkingId??throw new Exception("仮説には思考が必須です");
+            Date = date;
         }
         public HypothesisId Id { get;  }
         public ThinkingId ThinkingId { get; }
         public string Text { get;private set; }
+        public DateTime Date { get;private set; }
         public void ChangeText(string newText)
         {
             if (newText.Length > 500) throw new Exception($"100文字以内で入力して下さい。");
             Text = newText;
+        }
+        public void ChangeDate(DateTime newDate)
+        {
+            Date = newDate;
         }
     }
 }

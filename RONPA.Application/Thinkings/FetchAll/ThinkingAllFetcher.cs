@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using RONPA.Domain.Thinkings;
 
-namespace RONPA.UseCase.Thinkings
+namespace RONPA.UseCase.Thinkings.FetchAll
 {
     public class ThinkingAllFetcher
     {

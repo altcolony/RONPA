@@ -4,20 +4,17 @@ using System.Linq;
 using RONPA.Domain.Thinkings;
 using RONPA.Domain.Knowledges;
 
-namespace RONPA.UseCase.Thinkings
+namespace RONPA.UseCase.Thinkings.LinkThinkingWithKnowledges
 {
     public class ThinkingWithKnowledgeLinker
     {
         private readonly IThinkingRepository _thinkingRepository;
-        private readonly IKnowledgeRepository _knowledgeRepository;
         public ThinkingWithKnowledgeLinker(
-            IThinkingRepository thinkingRepository,
-            IKnowledgeRepository knowledgeRepository)
+            IThinkingRepository thinkingRepository)
         {
             _thinkingRepository = thinkingRepository;
-            _knowledgeRepository = knowledgeRepository;
         }
-        public void Execute(ThinkingWithKnowledgeLinkCommand command)
+        public void Execute(LinkThinkingWithKnowledgesCommand command)
         {
             var thinking = _thinkingRepository.Find(new ThinkingId(command.ThinkingId));
             var knowledgeids = command.KnowledgeIds.Select(x => new KnowledgeId(x)).ToList();

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using RONPA.Domain.Hypothesises;
 using RONPA.Domain.Thinkings;
 
-namespace RONPA.UseCase.Thinkings
+namespace RONPA.UseCase.Thinkings.FetchHypothesisByThinking
 {
     public class HypothesisByThinkingFetcher
     {

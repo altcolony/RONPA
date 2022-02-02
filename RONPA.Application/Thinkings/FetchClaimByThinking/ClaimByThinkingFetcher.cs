@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using RONPA.Domain.Claims;
 using RONPA.Domain.Thinkings;
 
-namespace RONPA.UseCase.Thinkings
+namespace RONPA.UseCase.Thinkings.FetchClaimByThinking
 {
     public class ClaimByThinkingFetcher
     {
@@ -14,9 +14,9 @@ namespace RONPA.UseCase.Thinkings
         {
             _claimRepository = claimRepository;
         }
-        public Claim Execute(ThinkingId id)
+        public Claim Execute(FetchClaimByThinkingCommand command)
         {
-            return _claimRepository.FindByThinking(id);
+            return _claimRepository.FindByThinking(new ThinkingId(command.ThinkingId));
         }
     }
 }

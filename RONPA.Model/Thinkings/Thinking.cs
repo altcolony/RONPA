@@ -11,22 +11,28 @@ namespace RONPA.Domain.Thinkings
             ThinkingId id,
             string text,
             IList<KnowledgeId>knowledgeIds,
-            ClaimId claimId)
+            ClaimId claimId,
+            DateTime date)
         {
             Id = id;
             if (text.Length > 300) throw new Exception("思考は300文字以内で入力して下さい。");
             Text = text;
             KnowledgeIds = knowledgeIds;
             ClaimId = claimId;
+            Date = date;
         }
         public ThinkingId Id { get; }
         public string Text { get;private set; }
         public IList<KnowledgeId> KnowledgeIds { get; private set; }
         public ClaimId ClaimId { get; private set; }
-
+        public DateTime Date { get;private set; }
         public void ChangeText(string newText)
         {
             throw new NotImplementedException("思考は編集できません");
+        }
+        public void ChangeDate(DateTime newDate)
+        {
+            Date = newDate;
         }
         public void JoinKnowledge(KnowledgeId id)
         {
