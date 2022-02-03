@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using RONPA.Domain.Knowledges;
 using RONPA.Domain.Thinkings;
 
@@ -13,9 +14,14 @@ namespace RONPA.UseCase.Thinkings.FetchKnowledgesByThinking
         {
             _knowledgeRepository = knowledgeRepository;
         }
-        public IEnumerable<Knowledge> Execute(FetchKnowledgeByThinkingCommand command)
+        public IEnumerable<KnowledgeData> Execute(FetchKnowledgeByThinkingCommand command)
         {
-            return _knowledgeRepository.FindByThinking(new ThinkingId(command.ThinkingId));
+            var knowledges = _knowledgeRepository.FindByThinking(new ThinkingId(command.ThinkingId));
+            return knowledges.Select(x => new KnowledgeData(
+                x.Id.Value,
+                x.Text,
+                x.KnowledgeIds.Select(x => x.Value).ToList(),
+                x.Date));
         }
     }
 }

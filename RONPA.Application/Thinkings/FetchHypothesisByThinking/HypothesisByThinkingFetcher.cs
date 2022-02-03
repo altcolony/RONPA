@@ -12,9 +12,14 @@ namespace RONPA.UseCase.Thinkings.FetchHypothesisByThinking
         {
             _hypothesisRepository = hypothesisRepository;
         }
-        public Hypothesis Execute(ThinkingId id)
+        public HypothesisData Execute(ThinkingId id)
         {
-            return _hypothesisRepository.FindByThinking(id);
+            var hypothesis = _hypothesisRepository.FindByThinking(id);
+            return new HypothesisData(
+                hypothesis.Id.Value,
+                hypothesis.Text,
+                hypothesis.ThinkingId.Value,
+                hypothesis.Date);
         }
     }
 }

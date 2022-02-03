@@ -16,8 +16,6 @@ namespace RONPA.InMemory
                     new KnowledgeId(0),
                     "テストknowledge",
                     new List<KnowledgeId>(),
-                    new List<ThinkingId>(),
-                    new List<ClaimId>(),
                     new DateTime(2022,1,1)
                     ) 
             },

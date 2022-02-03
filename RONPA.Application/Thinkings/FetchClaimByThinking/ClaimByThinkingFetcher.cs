@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using RONPA.Domain.Claims;
 using RONPA.Domain.Thinkings;
 
@@ -14,9 +15,15 @@ namespace RONPA.UseCase.Thinkings.FetchClaimByThinking
         {
             _claimRepository = claimRepository;
         }
-        public Claim Execute(FetchClaimByThinkingCommand command)
+        public ClaimData Execute(FetchClaimByThinkingCommand command)
         {
-            return _claimRepository.FindByThinking(new ThinkingId(command.ThinkingId));
+            var claim = _claimRepository.FindByThinking(new ThinkingId(command.ThinkingId));
+            return new ClaimData(
+                claim.Id.Value,
+                claim.Text,
+                claim.KnowledgeIds.Select(x=>x.Value).ToList(),
+                claim.ThinkingId.Value,
+                claim.Date);
         }
     }
 }

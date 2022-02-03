@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using RONPA.Domain.Thinkings;
 
 namespace RONPA.UseCase.Thinkings.FetchAll
@@ -11,9 +12,15 @@ namespace RONPA.UseCase.Thinkings.FetchAll
         {
             _thinkingRepository = thinkingRepository;
         }
-        public IEnumerable<Thinking> Execute()
+        public IEnumerable<ThinkingData> Execute()
         {
-            return _thinkingRepository.FindAll();
+            var thinkings = _thinkingRepository.FindAll();
+            return thinkings.Select(x => new ThinkingData(
+                x.Id.Value,
+                x.Text,
+                x.KnowledgeIds.Select(x => x.Value).ToList(),
+                x.ClaimId.Value,
+                x.Date));
         }
 
     }

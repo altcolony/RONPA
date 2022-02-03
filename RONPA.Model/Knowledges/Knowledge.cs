@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using RONPA.Domain.Thinkings;
-using RONPA.Domain.Claims;
 
 namespace RONPA.Domain.Knowledges
 {
@@ -11,22 +10,16 @@ namespace RONPA.Domain.Knowledges
             KnowledgeId id,
             string text,
             IList<KnowledgeId>knowledgeIds,
-            IList<ThinkingId>thinkingIds,
-            IList<ClaimId>claimIds,
             DateTime date)
         {
             Id = id;
             Text = text;
             KnowledgeIds = knowledgeIds;
-            ThinkingIds = thinkingIds;
-            ClaimIds = claimIds;
             Date = date;
         }
         public KnowledgeId Id { get; }
         public string Text { get; private set; }
         public IList<KnowledgeId> KnowledgeIds { get; private set; }
-        public IList<ThinkingId> ThinkingIds { get; private set; }
-        public IList<ClaimId> ClaimIds { get; private set; }
 
         public DateTime Date { get;private set; }
 
@@ -47,16 +40,6 @@ namespace RONPA.Domain.Knowledges
         {
             if (KnowledgeIds == null) KnowledgeIds = new List<KnowledgeId>();
             KnowledgeIds.Add(id);
-        }
-        public void JoinThinking(ThinkingId id)
-        {
-            if (ThinkingIds == null) ThinkingIds = new List<ThinkingId>();
-            ThinkingIds.Add(id);
-        }
-        public void JoinClaim(ClaimId id)
-        {
-            if (ClaimIds == null) ClaimIds = new List<ClaimId>();
-            ClaimIds.Add(id);
         }
     }
 }
