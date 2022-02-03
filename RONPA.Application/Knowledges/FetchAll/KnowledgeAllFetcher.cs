@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using RONPA.Domain.Knowledges;
 
 namespace RONPA.UseCase.Knowledges.FetchAll
@@ -12,6 +12,14 @@ namespace RONPA.UseCase.Knowledges.FetchAll
         {
             _knowledgeRepository = knowledgeRepository;
         }
-        public 
+        public IEnumerable<KnowledgeData> Execute()
+        {
+            var knowledges = _knowledgeRepository.FindAll();
+            return knowledges.Select(x => new KnowledgeData(
+                x.Id.Value,
+                x.Text,
+                x.KnowledgeIds.Select(x => x.Value).ToList(),
+                x.Date));
+        }
     }
 }
