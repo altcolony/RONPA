@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using RONPA.Domain.Thinkings;
+using System.Linq;
 
 namespace RONPA.Domain.Knowledges
 {
@@ -34,8 +34,14 @@ namespace RONPA.Domain.Knowledges
         } 
         public bool IsNotSame(KnowledgeId other)
         {
-            return this.Id.Value == other.Value ? throw new Exception("同一の知識は紐づけられません") : true;
+            var tmpKnowledgeIds = new List<KnowledgeId>();
+            tmpKnowledgeIds.Add(Id);
+            tmpKnowledgeIds.AddRange(KnowledgeIds);
+            
+            return tmpKnowledgeIds.Any(x => x.Equals(other)) ? throw new Exception("同一の知識は紐づけられません") : true;
         }
+        
+
         public void JoinKnowledge(KnowledgeId id)
         {
             if (KnowledgeIds == null) KnowledgeIds = new List<KnowledgeId>();
