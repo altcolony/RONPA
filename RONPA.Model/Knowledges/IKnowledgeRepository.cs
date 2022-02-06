@@ -7,7 +7,7 @@ namespace RONPA.Domain.Knowledges
     public interface IKnowledgeRepository
     {
         public Knowledge Find(KnowledgeId id);
-        public IEnumerable<Knowledge> FindByThinking(ThinkingId id);
+        public IEnumerable<Knowledge> Finds(IEnumerable<KnowledgeId> ids);
         public IEnumerable<Knowledge> FindAll();
 
         void Save(Knowledge card);

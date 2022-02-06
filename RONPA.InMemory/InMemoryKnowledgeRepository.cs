@@ -7,7 +7,7 @@ using RONPA.Domain.Claims;
 
 namespace RONPA.InMemory
 {
-    public class InMemoryCardRepository:IKnowledgeRepository
+    public class InMemoryKnowledgeRepository:IKnowledgeRepository
     {
         private readonly Dictionary<int, Knowledge> Store = new Dictionary<int, Knowledge>()
         {
@@ -21,9 +21,9 @@ namespace RONPA.InMemory
             },
         };
 
-        public Knowledge Find(int id)
+        public Knowledge Find(KnowledgeId id)
         {
-            return Store[id];
+            return Store[id.Value];
         }
         public IEnumerable<Knowledge> FindAll(IEnumerable<int> ids)
         {
@@ -39,13 +39,16 @@ namespace RONPA.InMemory
                 yield return item.Value;
             }
         }
-        public IEnumerable<Knowledge> FindByThinking(ThinkingId id)
+        public IEnumerable<Knowledge> Finds(IEnumerable<KnowledgeId> ids)
         {
             foreach (var item in Store)
             {
-                if (item.Value.ThinkingIds.Contains(id))
+                foreach (var id in ids)
                 {
-                    yield return item.Value;
+                    if (item.Value.KnowledgeIds.Contains(id))
+                    {
+                        yield return item.Value;
+                    }
                 }
             }
         }

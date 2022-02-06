@@ -20,7 +20,7 @@ namespace RONPA
         }
         private void SetupRepository(IServiceCollection services)
         {
-            services.AddSingleton<IKnowledgeRepository, InMemoryCardRepository>();
+            services.AddSingleton<IKnowledgeRepository, InMemoryKnowledgeRepository>();
             services.AddSingleton<IClaimRepository, InMemoryClaimRepository>();
 
         }
